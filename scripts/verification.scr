@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# invoking truffle-plugin-verify
+
+# TODO: set network (sepolia|mainnet) and addresses
+
+NETWORK=sepolia
+MIGRATOR_ADDR=0x54215E34B33FfBF4B941BdaEfcA32bE2A8687fF5
+
+# And verify all:
+
+truffle run verify ExoplanetsMigrator@${MIGRATOR_ADDR} --network ${NETWORK}
