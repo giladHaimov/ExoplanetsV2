@@ -40,6 +40,10 @@ contract ExoplanetsV2NFT is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable
         baseURI = baseURI_;
     }
 
+    function setBaseURI(string memory newBaseURI) external onlyOwner {
+        baseURI = newBaseURI;
+    }
+
     function pause() public onlyOwner {
         _pause();
     }
